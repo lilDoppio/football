@@ -27,7 +27,7 @@ function App() {
 
   useEffect(() => {
     fetchData()
-  })
+  }, [])
 
   const onScrollHandler = (e: React.UIEvent<HTMLDivElement>) => {
     const bottom = (e.target as HTMLElement).scrollHeight - (e.target as HTMLElement).scrollTop === (e.target as HTMLElement).clientHeight;
