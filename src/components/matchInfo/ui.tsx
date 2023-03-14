@@ -9,7 +9,7 @@ const StyledBox = styled(Box)(({ theme }) => ({
     display: 'flex', 
     flexDirection: 'column', 
     justifyContent: 'space-around',
-    '@media screen and (max-width: 600px)': {
+    '@media screen and (max-width: 764px)': {
         width: '100%', 
     }
 }))

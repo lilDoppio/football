@@ -1,9 +1,9 @@
 import Box from '@mui/material/Box';
 import CircularProgress from '@mui/material/CircularProgress';
-import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import MatchCard, { Match } from './components/matchCard/ui';
 import { styled } from '@mui/material/styles';
+import { getMatchesApi } from './api/calendar';
 
 const Container = styled(Box)(({ theme }) => ({
   width: '100%',
@@ -20,8 +20,8 @@ function App() {
   const [offset, setOffset] = useState<number>(0)
 
   async function fetchData() {
-    const {data}: any = await axios.get(`https://footballista.ru/api/seasons/5099/calendar_paginated?limit=10&offset=${offset}`)
-    setMatches((prevState) => [...prevState, ...data.items])
+    const items: Match[] = await getMatchesApi(offset)
+    setMatches((prevState) => [...prevState, ...items])
     setOffset((prevState) => prevState + 10)
   }
 

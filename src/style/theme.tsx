@@ -14,17 +14,12 @@ export const rootTheme = createTheme({
             },
             '&.MuiTypography-h6': {
               fontSize: '18px'
-            },
-            '&.MuiTypography-body1': {
-              fontSize: '14px'
-            },
-            '&.MuiTypography-body2': {
-              fontSize: '12px'
             }
           }
         }
       }
     },
+    spacing: [20, 25, 50],
     typography: {
       fontFamily: 'DM Sans, sans-serif'
     }

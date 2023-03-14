@@ -22,5 +22,5 @@ export const getCurrentTime = (date: Date): string => {
       return time
     }
   
-    return `${date.getHours()}:${parseTime(date.getMinutes())}:${parseTime(date.getSeconds())}`
+    return `${parseTime(date.getHours())}:${parseTime(date.getMinutes())}:${parseTime(date.getSeconds())}`
 }

@@ -11,11 +11,11 @@ const StylesCard = styled(Card)(({ theme }) => ({
     width: 'calc(100vw - 50px)', 
     height: '130px', 
     minHeight: '130px', 
-    padding: '25px', 
-    marginTop: '20px', 
+    padding: theme.spacing(1), 
+    marginTop: theme.spacing(0), 
     background: 'rgba(0, 0, 0, 0.3)', 
     color: '#fff',
-    '@media screen and (max-width: 600px)': {
+    '@media screen and (max-width: 764px)': {
         height: 'calc(100vh - 50px)',
         flexDirection: 'column',
         justifyContent: 'space-around',
@@ -38,7 +38,7 @@ interface MatchCardProps {
 }
 
 function MatchCard({ match }: MatchCardProps) {
-    const isMobileResolution = useMediaQuery('(max-width:600px)');
+    const isMobileResolution = useMediaQuery('(max-width:764px)');
 
     if (isMobileResolution) {
         return (
